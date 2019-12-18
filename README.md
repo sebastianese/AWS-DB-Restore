@@ -13,18 +13,18 @@ Script was designed to be run from Jenkins using Jenkins secrets
 
 
 # Example of requirement installation for Amazon Linux 
-sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-yum install jenkins
-sudo amazon-linux-extras install java-openjdk11
-service jenkins start
-sudo chkconfig --add jenkins
+- sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+- sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+- yum install jenkins
+- sudo amazon-linux-extras install java-openjdk11
+- service jenkins start
+- sudo chkconfig --add jenkins
 
-curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
-sudo yum install -y powershell
-pwsh -> Install-Module -Name AWSPowerShell.NetCore
+- curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
+- sudo yum install -y powershell
+- pwsh -> Install-Module -Name AWSPowerShell.NetCore
 
-vi /etc/yum.repos.d/mongodb-org-3.4.repo
+- vi /etc/yum.repos.d/mongodb-org-3.4.repo
 -> 
 [mongodb-org-3.4]
 name=MongoDB Repository
@@ -33,5 +33,5 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
 
-sudo yum install -y mongodb-org-tools
+- sudo yum install -y mongodb-org-tools
 
